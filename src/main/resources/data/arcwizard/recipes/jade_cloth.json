@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    },
+    "X": {
+      "item": "arcwizard:jade"
+    }
+  },
+  "result": {
+    "item": "arcwizard:jade_cloth",
+    "count": 1
+  }
+}

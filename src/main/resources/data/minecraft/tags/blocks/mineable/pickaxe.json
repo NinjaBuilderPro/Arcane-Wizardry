@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+        "arcwizard:bob_ore",
+        "arcwizard:jade_ore",
+        "arcwizard:ruby_ore",
+        "arcwizard:sapphire_ore"
+    ]
+}
