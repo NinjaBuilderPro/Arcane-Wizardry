@@ -14,7 +14,13 @@ out
 .idea
 
 # gradle
-build
+build/c*
+build/d*
+build/e*
+build/g*
+build/n*
+build/r*
+build/t*
 .gradle
 
 # other
