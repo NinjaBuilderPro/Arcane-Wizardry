@@ -1,7 +1,9 @@
 package com.ninjabuilderpro.arcwizard;
 
 import com.ninjabuilderpro.arcwizard.init.blockInit;
+import com.ninjabuilderpro.arcwizard.init.configuredFeatureInit;
 import com.ninjabuilderpro.arcwizard.init.itemInit;
+import com.ninjabuilderpro.arcwizard.init.placedFeatureInit;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -18,6 +20,8 @@ public class arcwizard {
         
         itemInit.ITEMS.register(bus);
         blockInit.BLOCKS.register(bus);
+        configuredFeatureInit.CONFIGURED_FEATURES.register(bus);
+        placedFeatureInit.PLACED_FEATURES.register(bus);
     }
 
     public static final CreativeModeTab TAB = new CreativeModeTab(MODID) {
