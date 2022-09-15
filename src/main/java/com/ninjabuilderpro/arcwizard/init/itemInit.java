@@ -2,6 +2,7 @@ package com.ninjabuilderpro.arcwizard.init;
 
 import com.ninjabuilderpro.arcwizard.arcwizard;
 import com.ninjabuilderpro.arcwizard.base.ModArmorMaterial;
+import com.ninjabuilderpro.arcwizard.items.jade_staff;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.registries.DeferredRegister;
@@ -23,66 +25,73 @@ public class itemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, arcwizard.MODID);
 
     public static final RegistryObject<Item> BOB = ITEMS.register("bob", 
-    () -> new Item(new Item.Properties().tab(arcwizard.TAB).food(Foods.BOB)));
+    () -> new Item(props().food(Foods.BOB)));
 
     public static final RegistryObject<Item> JADE = ITEMS.register("jade", 
-    () -> new Item(new Item.Properties().tab(arcwizard.TAB)));
+    () -> new Item(props()));
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", 
-    () -> new Item(new Item.Properties().tab(arcwizard.TAB)));
+    () -> new Item(props()));
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", 
-    () -> new Item(new Item.Properties().tab(arcwizard.TAB)));
+    () -> new Item(props()));
 
     public static final RegistryObject<Item> JADE_CLOTH = ITEMS.register("jade_cloth", 
-    () -> new Item(new Item.Properties().tab(arcwizard.TAB)));
+    () -> new Item(props()));
     public static final RegistryObject<Item> RUBY_CLOTH = ITEMS.register("ruby_cloth", 
-    () -> new Item(new Item.Properties().tab(arcwizard.TAB)));
+    () -> new Item(props()));
     public static final RegistryObject<Item> SAPPHIRE_CLOTH = ITEMS.register("sapphire_cloth", 
-    () -> new Item(new Item.Properties().tab(arcwizard.TAB)));
+    () -> new Item(props()));
 
     public static final RegistryObject<SwordItem> BOB_SWORD = ITEMS.register("bob_sword", 
-    () -> new SwordItem(ToolTiers.BOB, 6, -2.4f, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new SwordItem(ToolTiers.BOB, 6, -2.4f, props()));
+
+    public static final RegistryObject<jade_staff> JADE_STAFF = ITEMS.register("jade_staff", 
+    () -> new jade_staff(props()));
 
     public static final RegistryObject<ArmorItem> BOB_HELMET =  ITEMS.register("bob_helmet", 
-    () -> new ArmorItem(ArmorTiers.BOB, EquipmentSlot.HEAD, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.BOB, EquipmentSlot.HEAD, props()));
     public static final RegistryObject<ArmorItem> BOB_CHESTPLATE =  ITEMS.register("bob_chestplate", 
-    () -> new ArmorItem(ArmorTiers.BOB, EquipmentSlot.CHEST, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.BOB, EquipmentSlot.CHEST, props()));
     public static final RegistryObject<ArmorItem> BOB_LEGGINGS =  ITEMS.register("bob_leggings", 
-    () -> new ArmorItem(ArmorTiers.BOB, EquipmentSlot.LEGS, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.BOB, EquipmentSlot.LEGS, props()));
     public static final RegistryObject<ArmorItem> BOB_BOOTS =  ITEMS.register("bob_boots", 
-    () -> new ArmorItem(ArmorTiers.BOB, EquipmentSlot.FEET, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.BOB, EquipmentSlot.FEET, props()));
 
     public static final RegistryObject<ArmorItem> JADE_HELMET =  ITEMS.register("jade_helmet", 
-    () -> new ArmorItem(ArmorTiers.JADE, EquipmentSlot.HEAD, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.JADE, EquipmentSlot.HEAD, props()));
     public static final RegistryObject<ArmorItem> JADE_CHESTPLATE =  ITEMS.register("jade_chestplate", 
-    () -> new ArmorItem(ArmorTiers.JADE, EquipmentSlot.CHEST, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.JADE, EquipmentSlot.CHEST, props()));
     public static final RegistryObject<ArmorItem> JADE_LEGGINGS =  ITEMS.register("jade_leggings", 
-    () -> new ArmorItem(ArmorTiers.JADE, EquipmentSlot.LEGS, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.JADE, EquipmentSlot.LEGS, props()));
     public static final RegistryObject<ArmorItem> JADE_BOOTS =  ITEMS.register("jade_boots", 
-    () -> new ArmorItem(ArmorTiers.JADE, EquipmentSlot.FEET, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.JADE, EquipmentSlot.FEET, props()));
 
     public static final RegistryObject<ArmorItem> RUBY_HELMET =  ITEMS.register("ruby_helmet", 
-    () -> new ArmorItem(ArmorTiers.RUBY, EquipmentSlot.HEAD, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.RUBY, EquipmentSlot.HEAD, props()));
     public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE =  ITEMS.register("ruby_chestplate", 
-    () -> new ArmorItem(ArmorTiers.RUBY, EquipmentSlot.CHEST, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.RUBY, EquipmentSlot.CHEST, props()));
     public static final RegistryObject<ArmorItem> RUBY_LEGGINGS =  ITEMS.register("ruby_leggings", 
-    () -> new ArmorItem(ArmorTiers.RUBY, EquipmentSlot.LEGS, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.RUBY, EquipmentSlot.LEGS, props()));
     public static final RegistryObject<ArmorItem> RUBY_BOOTS =  ITEMS.register("ruby_boots", 
-    () -> new ArmorItem(ArmorTiers.RUBY, EquipmentSlot.FEET, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.RUBY, EquipmentSlot.FEET, props()));
 
     public static final RegistryObject<ArmorItem> SAPPHIRE_HELMET =  ITEMS.register("sapphire_helmet", 
-    () -> new ArmorItem(ArmorTiers.SAPPHIRE, EquipmentSlot.HEAD, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.SAPPHIRE, EquipmentSlot.HEAD, props()));
     public static final RegistryObject<ArmorItem> SAPPHIRE_CHESTPLATE =  ITEMS.register("sapphire_chestplate", 
-    () -> new ArmorItem(ArmorTiers.SAPPHIRE, EquipmentSlot.CHEST, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.SAPPHIRE, EquipmentSlot.CHEST, props()));
     public static final RegistryObject<ArmorItem> SAPPHIRE_LEGGINGS =  ITEMS.register("sapphire_leggings", 
-    () -> new ArmorItem(ArmorTiers.SAPPHIRE, EquipmentSlot.LEGS, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.SAPPHIRE, EquipmentSlot.LEGS, props()));
     public static final RegistryObject<ArmorItem> SAPPHIRE_BOOTS =  ITEMS.register("sapphire_boots", 
-    () -> new ArmorItem(ArmorTiers.SAPPHIRE, EquipmentSlot.FEET, new Item.Properties().tab(arcwizard.TAB)));
+    () -> new ArmorItem(ArmorTiers.SAPPHIRE, EquipmentSlot.FEET, props()));
     public static class Foods {
         public static final FoodProperties BOB = new FoodProperties.Builder()
         .nutrition(2)
         .saturationMod(1)
         .effect(() -> new MobEffectInstance(MobEffects.POISON, 100, 1), 1)
         .build();
+    }
+
+    private static Properties props() {
+        return new Item.Properties().tab(arcwizard.TAB);
     }
 
     public static class ToolTiers{
