@@ -3,6 +3,8 @@ package com.ninjabuilderpro.arcwizard.init;
 import com.ninjabuilderpro.arcwizard.arcwizard;
 import com.ninjabuilderpro.arcwizard.base.ModArmorMaterial;
 import com.ninjabuilderpro.arcwizard.items.jade_staff;
+import com.ninjabuilderpro.arcwizard.items.ruby_staff;
+import com.ninjabuilderpro.arcwizard.items.sapphire_staff;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -46,6 +48,10 @@ public class itemInit {
 
     public static final RegistryObject<jade_staff> JADE_STAFF = ITEMS.register("jade_staff", 
     () -> new jade_staff(props()));
+    public static final RegistryObject<ruby_staff> RUBY_STAFF = ITEMS.register("ruby_staff", 
+    () -> new ruby_staff(props()));
+    public static final RegistryObject<sapphire_staff> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff", 
+    () -> new sapphire_staff(props()));
 
     public static final RegistryObject<ArmorItem> BOB_HELMET =  ITEMS.register("bob_helmet", 
     () -> new ArmorItem(ArmorTiers.BOB, EquipmentSlot.HEAD, props()));
@@ -128,6 +134,7 @@ public class itemInit {
                 750, 
                 new int[] {2, 6, 5, 2}, 
                 25, 
+                
                 SoundEvents.ARMOR_EQUIP_LEATHER, 
                 0.0f, 
                 0.0f, 

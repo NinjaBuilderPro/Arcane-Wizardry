@@ -28,5 +28,7 @@
     "item.arcwizard.sapphire_chestplate" : "Sapphire Chestplate",
     "item.arcwizard.sapphire_leggings" : "Sapphire Leggings",
     "item.arcwizard.sapphire_boots" : "Sapphire Boots",
-    "item.arcwizard.jade_staff" : "Jade Staff"
+    "item.arcwizard.jade_staff" : "Jade Staff",
+    "item.arcwizard.ruby_staff" : "Ruby Staff",
+    "item.arcwizard.sapphire_staff" : "Sapphire Staff"
 }
