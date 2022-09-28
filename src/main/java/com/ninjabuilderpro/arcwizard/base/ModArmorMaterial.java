@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 import com.ninjabuilderpro.arcwizard.arcwizard;
 
-public record ModArmorMaterial(String name, int durabillity, int[] protection, int enchantability, SoundEvent equipSound, float toughness, float knockbackresistance, Supplier<Ingredient> repairMaterial) implements ArmorMaterial {
+public record ModArmorMaterial(String name, int durabillity, int[] protection, int enchantability, SoundEvent equipSound, float toughness, float knockbackresistance, Supplier<Ingredient> repairMaterial, int maxMana) implements ArmorMaterial {
 
     private static final int[] DURABILITY_PER_SLOT = new int[] { 13, 15, 16, 11 };
     @Override
@@ -76,6 +76,10 @@ public record ModArmorMaterial(String name, int durabillity, int[] protection, i
     public String toString() {
         // TODO Auto-generated method stub
         return null;
+    }
+
+    public int maxMana(int MAX_MANA) {
+        return MAX_MANA;
     }
 
 }

@@ -119,7 +119,8 @@ public class itemInit {
                 SoundEvents.ARMOR_EQUIP_NETHERITE,
                 1.2f,
                 0.0f,
-                () -> Ingredient.of(itemInit.BOB.get()));
+                () -> Ingredient.of(itemInit.BOB.get()),
+                0);
             public static final ArmorMaterial JADE = new ModArmorMaterial(
                 "jade", 
                 500, 
@@ -128,17 +129,18 @@ public class itemInit {
                 SoundEvents.ARMOR_EQUIP_LEATHER, 
                 0.0f, 
                 0.0f, 
-                () -> Ingredient.of(itemInit.JADE_CLOTH.get()));
+                () -> Ingredient.of(itemInit.JADE_CLOTH.get()),
+                60);
             public static final ArmorMaterial RUBY = new ModArmorMaterial(
                 "ruby", 
                 750, 
                 new int[] {2, 6, 5, 2}, 
                 25, 
-                
                 SoundEvents.ARMOR_EQUIP_LEATHER, 
                 0.0f, 
                 0.0f, 
-                () -> Ingredient.of(itemInit.RUBY_CLOTH.get()));
+                () -> Ingredient.of(itemInit.RUBY_CLOTH.get()),
+                80);
             public static final ArmorMaterial SAPPHIRE = new ModArmorMaterial(
                 "jade", 
                 1000, 
@@ -147,6 +149,7 @@ public class itemInit {
                 SoundEvents.ARMOR_EQUIP_LEATHER, 
                 0.0f, 
                 0.0f, 
-                () -> Ingredient.of(itemInit.SAPPHIRE_CLOTH.get()));
+                () -> Ingredient.of(itemInit.SAPPHIRE_CLOTH.get()),
+                100);
     }
 }

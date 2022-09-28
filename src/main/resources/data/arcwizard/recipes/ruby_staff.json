@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " CA",
+      " BC",
+      "B  "
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:blaze_rod"
+      },
+      "A": {
+        "item": "arcwizard:ruby"
+      },
+      "C": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    "result": {
+      "item": "arcwizard:ruby_staff"
+    }
+  }
+  
