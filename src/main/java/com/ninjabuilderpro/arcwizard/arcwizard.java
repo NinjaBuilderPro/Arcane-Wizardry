@@ -2,6 +2,7 @@ package com.ninjabuilderpro.arcwizard;
 
 import com.ninjabuilderpro.arcwizard.init.blockInit;
 import com.ninjabuilderpro.arcwizard.init.configuredFeatureInit;
+import com.ninjabuilderpro.arcwizard.init.entityInit;
 import com.ninjabuilderpro.arcwizard.init.itemInit;
 import com.ninjabuilderpro.arcwizard.init.placedFeatureInit;
 
@@ -20,6 +21,7 @@ public class arcwizard {
         
         itemInit.ITEMS.register(bus);
         blockInit.BLOCKS.register(bus);
+        entityInit.ENTITIES.register(bus);
         configuredFeatureInit.CONFIGURED_FEATURES.register(bus);
         placedFeatureInit.PLACED_FEATURES.register(bus);
     }
