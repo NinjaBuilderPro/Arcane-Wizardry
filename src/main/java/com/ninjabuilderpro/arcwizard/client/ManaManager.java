@@ -5,19 +5,23 @@ import net.minecraft.network.chat.Component;
 import net.minecraftforge.client.event.ContainerScreenEvent.Render;
 
 public class ManaManager {
-    public static final ManaManager instance = new ManaManager();
-    ThreadLocal<Integer> currentMana = new ThreadLocal<Integer>(){
+    private static final ThreadLocal<ManaManager> instance = new ThreadLocal<ManaManager>(){
         @Override
-        protected Integer initialValue() {
+        protected ManaManager initialValue() {
             // TODO Auto-generated method stub
-            return 100;
+            return new ManaManager();
         }
     };
+    public static ManaManager getInstance() {
+        return instance.get();
+    }
+    int currentMana = 100;
+
     private ManaManager() {
 
     }
     public void useMana(int manaUsed) {
-        currentMana.set(currentMana.get() - manaUsed);
-        Minecraft.getInstance().player.sendSystemMessage(Component.literal("ManaLeft " + currentMana.get()));
+        currentMana -= manaUsed;
+        Minecraft.getInstance().player.sendSystemMessage(Component.literal("ManaLeft " + currentMana));
     }
 }

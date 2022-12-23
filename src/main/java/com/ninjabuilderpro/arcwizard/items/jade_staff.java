@@ -22,7 +22,7 @@ public class jade_staff extends Item{
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        ManaManager.instance.useMana(5);
+        ManaManager.getInstance().useMana(5);
         Vec3 look = player.getLookAngle();
         JadeBoltEntity arrow = new JadeBoltEntity(entityInit.JABE_BOLT.get(), 1.5D, 1.0D, 1.5D, level);
         arrow.setPos(player.position().x + look.x * 1.5D, player.position().y + look.y + 1.5D, player.position().z + look.z * 1.5D);
