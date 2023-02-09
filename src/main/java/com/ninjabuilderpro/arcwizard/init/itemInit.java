@@ -142,7 +142,7 @@ public class itemInit {
                 () -> Ingredient.of(itemInit.RUBY_CLOTH.get()),
                 80);
             public static final ArmorMaterial SAPPHIRE = new ModArmorMaterial(
-                "jade", 
+                "sapphire", 
                 1000, 
                 new int[] {3, 7, 5, 3}, 
                 30, 
