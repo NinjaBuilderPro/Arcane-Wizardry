@@ -47,11 +47,11 @@ public class itemInit {
     () -> new SwordItem(ToolTiers.BOB, 6, -2.4f, props()));
 
     public static final RegistryObject<jade_staff> JADE_STAFF = ITEMS.register("jade_staff", 
-    () -> new jade_staff(props()));
+    () -> new jade_staff(props().stacksTo(1)));
     public static final RegistryObject<ruby_staff> RUBY_STAFF = ITEMS.register("ruby_staff", 
-    () -> new ruby_staff(props()));
+    () -> new ruby_staff(props().stacksTo(1)));
     public static final RegistryObject<sapphire_staff> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff", 
-    () -> new sapphire_staff(props()));
+    () -> new sapphire_staff(props().stacksTo(1)));
 
     public static final RegistryObject<ArmorItem> BOB_HELMET =  ITEMS.register("bob_helmet", 
     () -> new ArmorItem(ArmorTiers.BOB, EquipmentSlot.HEAD, props()));

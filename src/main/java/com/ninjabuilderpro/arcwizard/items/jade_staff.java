@@ -22,13 +22,17 @@ public class jade_staff extends Item{
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        ManaManager.getInstance().useMana(5);
-        Vec3 look = player.getLookAngle();
-        JadeBoltEntity arrow = new JadeBoltEntity(entityInit.JABE_BOLT.get(), 1.5D, 1.0D, 1.5D, level);
-        arrow.setPos(player.position().x + look.x * 1.5D, player.position().y + look.y + 1.5D, player.position().z + look.z * 1.5D);
-        arrow.shoot(look.x , look.y, look.z, 2.0F, 0.0F);
-        level.addFreshEntity(arrow);
-        player.getCooldowns().addCooldown(this, 40);
-        return super.use(level, player, hand);
+        if(ManaManager.getInstance().getCurrentMana() >= 5){
+            ManaManager.getInstance().useMana(5);
+            Vec3 look = player.getLookAngle();
+            JadeBoltEntity arrow = new JadeBoltEntity(entityInit.JABE_BOLT.get(), 1.5D, 1.0D, 1.5D, level);
+            arrow.setPos(player.position().x + look.x * 1.5D, player.position().y + look.y + 1.5D, player.position().z + look.z * 1.5D);
+            arrow.shoot(look.x , look.y, look.z, 2.0F, 0.0F);
+            level.addFreshEntity(arrow);
+            player.getCooldowns().addCooldown(this, 40);
+            return super.use(level, player, hand);
+        } else{
+            return super.use(level, player, hand);
+        }
     }
 }

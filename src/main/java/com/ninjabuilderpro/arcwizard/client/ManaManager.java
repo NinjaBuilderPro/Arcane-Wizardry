@@ -21,7 +21,13 @@ public class ManaManager {
 
     }
     public void useMana(int manaUsed) {
-        currentMana -= manaUsed;
-        Minecraft.getInstance().player.sendSystemMessage(Component.literal("ManaLeft " + currentMana));
+        if(true){
+            currentMana -= manaUsed;
+            Minecraft.getInstance().player.sendSystemMessage(Component.literal("ManaLeft " + currentMana));
+        }
+
+    }
+    public int getCurrentMana(){
+        return currentMana;
     }
 }
