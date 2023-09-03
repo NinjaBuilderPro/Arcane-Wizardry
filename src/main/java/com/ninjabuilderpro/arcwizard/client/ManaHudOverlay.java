@@ -30,7 +30,7 @@ public class ManaHudOverlay {
 
         RenderSystem.setShaderTexture(0, FILLED_MANA);
         for(int i = 0; i < 20; i++){
-            if(0 > i){
+            if(ClientManaData.getPlayerMana()/5 >= i){
                 if(i < 10){
                     GuiComponent.blit(poseStack, x + 82 - (i * 8), y - 50, 0, 0, 9, 9, 9, 9);
                 } else{

@@ -1,5 +1,7 @@
 package com.ninjabuilderpro.arcwizard.mana;
 
+import com.ninjabuilderpro.arcwizard.client.ClientManaData;
+
 import net.minecraft.nbt.CompoundTag;
 
 public class PlayerMana {
@@ -13,10 +15,12 @@ public class PlayerMana {
 
     public void addMana(int add) {
         this.mana = Math.min(mana + add, MAX_MANA);
+        ClientManaData.set(mana);
     }
 
     public void subMana(int sub) {
         this.mana = Math.max(mana - sub, MIN_MANA);
+        ClientManaData.set(mana);
     }
 
     public void copyFrom(PlayerMana source) {
