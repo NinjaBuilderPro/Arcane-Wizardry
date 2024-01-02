@@ -46,8 +46,8 @@ public class ModEvents {@SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if(event.side == LogicalSide.SERVER) {
             event.player.getCapability(PlayerManaProvider.PLAYER_MANA).ifPresent(mana -> {
-                if(mana.getMana() < 91 && event.player.getRandom().nextFloat() < 0.01f) { // Once Every 5 Seconds on Avg
-                    mana.addMana(5);
+                if(mana.getMana() < 100 && event.player.getRandom().nextFloat() < 0.13f) { // Once Every 5 Seconds on Avg
+                    mana.addMana(1);
                     event.player.sendSystemMessage(Component.literal("Added Mana"));
                 }
             });

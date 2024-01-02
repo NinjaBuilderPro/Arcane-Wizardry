@@ -10,7 +10,7 @@ public class PlayerMana {
     private final int MAX_MANA = 100;
 
     public int getMana() {
-        return mana;
+        return mana - mana%5;
     }
 
     public void addMana(int add) {

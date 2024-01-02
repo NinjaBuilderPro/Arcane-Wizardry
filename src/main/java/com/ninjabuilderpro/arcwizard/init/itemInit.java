@@ -124,7 +124,7 @@ public class itemInit {
             public static final ArmorMaterial JADE = new ModArmorMaterial(
                 "jade", 
                 500, 
-                new int[] {2, 5, 4, 1}, 
+                new int[] {1, 6, 5, 2}, 
                 20, 
                 SoundEvents.ARMOR_EQUIP_LEATHER, 
                 0.0f, 
@@ -134,8 +134,8 @@ public class itemInit {
             public static final ArmorMaterial RUBY = new ModArmorMaterial(
                 "ruby", 
                 750, 
-                new int[] {2, 6, 5, 2}, 
-                25, 
+                new int[] {2, 7, 6, 3}, 
+                30, 
                 SoundEvents.ARMOR_EQUIP_LEATHER, 
                 0.0f, 
                 0.0f, 
@@ -144,8 +144,8 @@ public class itemInit {
             public static final ArmorMaterial SAPPHIRE = new ModArmorMaterial(
                 "sapphire", 
                 1000, 
-                new int[] {3, 7, 5, 3}, 
-                30, 
+                new int[] {3, 8, 7, 4}, 
+                40, 
                 SoundEvents.ARMOR_EQUIP_LEATHER, 
                 0.0f, 
                 0.0f, 
