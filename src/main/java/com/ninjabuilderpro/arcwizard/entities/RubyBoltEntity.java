@@ -1,7 +1,5 @@
 package com.ninjabuilderpro.arcwizard.entities;
 
-import org.jetbrains.annotations.NotNull;
-
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -16,7 +14,7 @@ public class RubyBoltEntity extends AbstractArrow{
         super(entityType, level);
     }
 
-    public RubyBoltEntity(@NotNull EntityType<JadeBoltEntity> entityType, double x, double y, double z, Level level) {
+    public RubyBoltEntity(EntityType<RubyBoltEntity> entityType, double x, double y, double z, Level level) {
         super(entityType, x, y, z, level);
     }
 
@@ -31,7 +29,7 @@ public class RubyBoltEntity extends AbstractArrow{
 
     @Override
     protected void onHitEntity(EntityHitResult ray) {
-        this.setBaseDamage(3D);
+        this.setBaseDamage(3.5d);
         this.setPierceLevel((byte) 4);
         super.onHitEntity(ray);
     }

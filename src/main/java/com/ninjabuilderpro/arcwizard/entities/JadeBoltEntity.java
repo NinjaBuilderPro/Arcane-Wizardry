@@ -29,7 +29,7 @@ public class JadeBoltEntity extends AbstractArrow{
 
     @Override
     protected void onHitEntity(EntityHitResult ray) {
-        this.setBaseDamage(2.5D);
+        this.setBaseDamage(2.5d);
         this.setPierceLevel((byte) 6);
         super.onHitEntity(ray);
     }

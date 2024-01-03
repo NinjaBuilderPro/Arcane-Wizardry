@@ -2,6 +2,8 @@ package com.ninjabuilderpro.arcwizard.client;
 
 import com.ninjabuilderpro.arcwizard.arcwizard;
 import com.ninjabuilderpro.arcwizard.client.renderer.JadeBoltRenderer;
+import com.ninjabuilderpro.arcwizard.client.renderer.RubyBoltRenderer;
+import com.ninjabuilderpro.arcwizard.client.renderer.SapphireBoltRenderer;
 import com.ninjabuilderpro.arcwizard.init.entityInit;
 
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -14,6 +16,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class ClientSetup {
     @SubscribeEvent
     public static void doSetup(FMLClientSetupEvent event) {
-        EntityRenderers.register(entityInit.JABE_BOLT.get(), JadeBoltRenderer::new);
+        EntityRenderers.register(entityInit.JADE_BOLT.get(), JadeBoltRenderer::new);
+        EntityRenderers.register(entityInit.RUBY_BOLT.get(), RubyBoltRenderer::new);
+        EntityRenderers.register(entityInit.SAPPHIRE_BOLT.get(), SapphireBoltRenderer::new);
     }
 }

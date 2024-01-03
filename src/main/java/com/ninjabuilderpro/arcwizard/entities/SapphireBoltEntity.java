@@ -1,7 +1,5 @@
 package com.ninjabuilderpro.arcwizard.entities;
 
-import org.jetbrains.annotations.NotNull;
-
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -16,7 +14,7 @@ public class SapphireBoltEntity extends AbstractArrow{
         super(entityType, level);
     }
 
-    public SapphireBoltEntity(@NotNull EntityType<JadeBoltEntity> entityType, double x, double y, double z, Level level) {
+    public SapphireBoltEntity(EntityType<SapphireBoltEntity> entityType, double x, double y, double z, Level level) {
         super(entityType, x, y, z, level);
     }
 
@@ -31,7 +29,7 @@ public class SapphireBoltEntity extends AbstractArrow{
 
     @Override
     protected void onHitEntity(EntityHitResult ray) {
-        this.setBaseDamage(3.5D);
+        this.setBaseDamage(4.5d);
         this.setPierceLevel((byte) 4);
         super.onHitEntity(ray);
     }

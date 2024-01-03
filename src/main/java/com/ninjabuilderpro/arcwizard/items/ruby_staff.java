@@ -26,7 +26,7 @@ public class ruby_staff extends Item{
             if(mana.getMana() >= MANA_COST){
                 mana.subMana(MANA_COST);
                 Vec3 look = player.getLookAngle();
-                RubyBoltEntity arrow = new RubyBoltEntity(entityInit.JABE_BOLT.get(), 1.5D, 1.0D, 1.5D, level);
+                RubyBoltEntity arrow = new RubyBoltEntity(entityInit.RUBY_BOLT.get(), 1.5D, 1.0D, 1.5D, level);
                 arrow.setPos(player.position().x + look.x * 1.5D, player.position().y + look.y + 1.5D, player.position().z + look.z * 1.5D);
                 arrow.shoot(look.x , look.y, look.z, 2.0F, 0.0F);
                 level.addFreshEntity(arrow);
